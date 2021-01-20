@@ -1,0 +1,6 @@
+<launch>    
+    <!-- On va récupérer la map statique et on la rend disponivle via un service gràace au node map-server-->
+    <node pkg="map_server" type="map_server" name="mapserver" args="/home/user/catkin_ws/src/challenge-pkg/resources/map.yaml" />
+    <!--amcl-->
+    <!--move_base-->
+</launch>
