@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="challenge_2" name="take_picture_node" type="takepicture.py" output="screen" >
+	</node>
+</launch>
