@@ -33,7 +33,6 @@ def callback_laser(msg):
     distance_side_d = msg.ranges[719]
 
 
-
 def follow_wall():
     global yaw
     velocity.linear.x = 0
@@ -89,7 +88,7 @@ def rotate():
     while (current_angle < angle_r[1]):
         pub_vel.publish(velocity)
         t1 = rospy.Time.now().secs
-        print(current_angle, angle_r[1])
+        #Calcule
         current_angle = angle_r[0] * (t1 - t0)
         rate.sleep()
 
@@ -105,8 +104,9 @@ while not rospy.is_shutdown():
         velocity.angular.z = 0.5
 
     if not distance_front:
-    #    if distance_side_g > 0.3:
-    #        rotate()
+        if distance_side_g > 0.3:
+            velocity.linear.x = 0
+             velocity.angular.z = 0.3
 
         velocity.linear.x = 0.5
         velocity.angular.z = 0

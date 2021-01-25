@@ -22,7 +22,7 @@ class TakePicture(object):
         except CvBridgeError as e:
             print(e)
         #the picture is saved in the repository and showed
-        cv2.imwrite('/home/user/catkin_ws/src/can.jpg',cv_image)
+        cv2.imwrite('/home/user/catkin_ws/src/challenge_2/src/can.jpg',cv_image)
         cv2.imshow('image',cv_image)  
 
         cv2.waitKey(1)
