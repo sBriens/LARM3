@@ -4,7 +4,7 @@
 ## Challenge 1<br/>
 Pour mettre en place l'environnement, il faut :
 * Charger la simulation : roslaunch larm challenge-1.launch
-* Lancer l'architecture de contrôle : roslaunch student_pkg navigation.launch
+* Lancer l'architecture de contrôle : roslaunch challenge_1 navigation.launch (Si la commande ne marche pas, remplacer "challenge_1" par "student_pkg")
 * Lancer rviz
 * Donner une estimation de la pose avec rviz
 Il est maintenant possible de donner des destinations dans le topic /goal
